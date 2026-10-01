@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" type="image/jpeg" href="icon.jpg" />
+  <link rel="apple-touch-icon" href="icon.jpg" />
+  <title>Mogollon's Hearth Build Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #e7e1d4;
+      --paper: #f3eee3;
+      --paper-2: #ddd4c3;
+      --ink: #211e19;
+      --muted: #5d584f;
+      --line: #8f8068;
+      --line-soft: rgba(80, 68, 51, .22);
+      --wood: #542d1b;
+      --wood-deep: #2f1a12;
+      --ember: #b54f24;
+      --ember-hot: #d76c2e;
+      --pine: #334a3b;
+      --sky: #708897;
+      --shadow: rgba(40, 29, 18, .18);
+      --hero-veil: linear-gradient(90deg, rgba(16, 17, 16, .93) 0%, rgba(16, 17, 16, .78) 34%, rgba(16, 17, 16, .14) 68%, rgba(16,17,16,.06) 100%);
+      --display: "Alegreya SC", Georgia, serif;
+      --body: "Source Sans 3", "Trebuchet MS", sans-serif;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #151817;
+        --paper: #202321;
+        --paper-2: #292b27;
+        --ink: #f2ecdf;
+        --muted: #c8c0b2;
+        --line: #8c7961;
+        --line-soft: rgba(223, 204, 173, .17);
+        --wood: #9a5b35;
+        --wood-deep: #1b1310;
+        --ember: #db7040;
+        --ember-hot: #ed8d4d;
+        --pine: #66806b;
+        --sky: #92aeba;
+        --shadow: rgba(0, 0, 0, .34);
+      }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-width: 0;
+      background:
+        repeating-linear-gradient(0deg, transparent 0 47px, var(--line-soft) 48px),
+        var(--bg);
+      color: var(--ink);
+      font-family: var(--body);
+      font-size: 17px;
+      line-height: 1.55;
+    }
+    a { color: inherit; }
+    img { display: block; max-width: 100%; }
+    button { font: inherit; }
+    .hero {
+      min-height: min(760px, 88vh);
+      display: grid;
+      align-items: end;
+      position: relative;
+      overflow: hidden;
+      background: #171a18 url("media-generation-hearth-hero-0-38611197-1f48-47e4-8359-bd7eeb17c243.webp") center / cover no-repeat;
+      color: #fff7e8;
+    }
+    .hero::before { content: ""; position: absolute; inset: 0; background: var(--hero-veil); }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 11px;
+      background: linear-gradient(90deg, #572f1c 0 20%, #bd592a 20% 22%, #3a2118 22% 62%, #70806b 62% 64%, #572f1c 64%);
+    }
+    .hero-inner {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: clamp(88px, 14vw, 176px) 0 clamp(62px, 9vw, 108px);
+      position: relative;
+      z-index: 1;
+    }
+    .identity { max-width: 650px; }
+    .chapter {
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+      margin: 0 0 14px;
+      color: #e0cbae;
+      font-size: .82rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    .chapter::before { content: ""; width: 34px; height: 2px; background: #db7440; }
+    h1, h2, h3 { font-family: var(--display); line-height: .98; margin: 0; }
+    h1 { max-width: 620px; font-size: clamp(3.9rem, 9vw, 7.8rem); font-weight: 600; letter-spacing: -.035em; text-wrap: balance; }
+    .tagline { margin: 20px 0 0; max-width: 520px; font-family: var(--display); font-size: clamp(1.5rem, 3.2vw, 2.35rem); color: #f2d8ad; line-height: 1.1; }
+    .intro { margin: 24px 0 0; max-width: 540px; color: #eee6da; font-size: 1.1rem; }
+    .jumpbar {
+      width: min(1180px, calc(100% - 40px));
+      margin: -30px auto 0;
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
+      background: var(--wood-deep);
+      color: #f7edde;
+      box-shadow: 0 15px 35px var(--shadow);
+      border-bottom: 3px solid var(--ember);
+    }
+    .jumpbar a {
+      flex: 1 1 180px;
+      padding: 17px 20px;
+      text-decoration: none;
+      text-align: center;
+      border-right: 1px solid rgba(255,255,255,.16);
+      font-weight: 700;
+    }
+    .jumpbar a:last-child { border-right: 0; }
+    .jumpbar a:hover, .jumpbar a:focus-visible { background: var(--ember); outline: none; }
+    main { overflow: hidden; }
+    .section { width: min(1120px, calc(100% - 40px)); margin: 0 auto; padding: clamp(74px, 9vw, 120px) 0; }
+    .section + .section { border-top: 1px solid var(--line-soft); }
+    .section-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(260px, .72fr); gap: 44px; align-items: end; margin-bottom: 42px; }
+    .kicker { margin: 0 0 8px; color: var(--ember); font-weight: 700; font-size: .8rem; letter-spacing: .13em; text-transform: uppercase; }
+    h2 { font-size: clamp(2.7rem, 6vw, 5.2rem); font-weight: 600; letter-spacing: -.025em; }
+    .section-lede { margin: 0 0 6px; color: var(--muted); font-size: 1.08rem; }
+    .vision-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 20px; }
+    .vision-copy {
+      padding: clamp(28px, 5vw, 56px);
+      background: var(--pine);
+      color: #f7f0e2;
+      box-shadow: 10px 10px 0 color-mix(in srgb, var(--line) 50%, transparent);
+    }
+    .vision-copy p { margin: 0; font-family: var(--display); font-size: clamp(1.65rem, 3vw, 2.5rem); line-height: 1.18; }
+    .vision-note { padding: 30px; border: 1px solid var(--line); background: var(--paper); }
+    .vision-note h3 { font-size: 1.7rem; margin-bottom: 12px; }
+    .vision-note p { margin: 0; color: var(--muted); }
+    .gallery-shell { background: var(--paper); border: 1px solid var(--line-soft); box-shadow: 0 16px 38px var(--shadow); }
+    .comparison { display: grid; grid-template-columns: 1fr 1fr; }
+    .photo-slot {
+      min-height: 380px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 32px;
+      background:
+        linear-gradient(135deg, transparent 49.5%, var(--line-soft) 50%, transparent 50.5%),
+        linear-gradient(45deg, transparent 49.5%, var(--line-soft) 50%, transparent 50.5%),
+        var(--paper-2);
+      background-size: 38px 38px;
+      position: relative;
+    }
+    .photo-slot + .photo-slot { border-left: 1px solid var(--line); }
+    .slot-copy { max-width: 260px; background: var(--paper); padding: 22px 24px; border-top: 4px solid var(--wood); box-shadow: 0 8px 24px var(--shadow); }
+    .slot-label { display: block; margin-bottom: 5px; font-family: var(--display); font-size: 1.7rem; font-weight: 700; }
+    .slot-copy small { color: var(--muted); font-size: .92rem; }
+    .gallery-caption { display: flex; justify-content: space-between; gap: 28px; padding: 20px 24px; border-top: 1px solid var(--line-soft); color: var(--muted); }
+    .gallery-caption strong { color: var(--ink); }
+    .progress-track { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .stage { background: var(--paper); border-top: 6px solid var(--line); padding: 28px; min-height: 230px; }
+    .stage.is-now { border-color: var(--ember); }
+    .stage-num { font-family: var(--display); color: var(--ember); font-size: 1.4rem; font-weight: 700; }
+    .stage h3 { margin: 34px 0 10px; font-size: 1.75rem; }
+    .stage p { margin: 0; color: var(--muted); }
+    .feature {
+      display: grid;
+      grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+      background: var(--wood-deep);
+      color: #f5ecdd;
+      overflow: hidden;
+    }
+    .feature-art {
+      min-height: 460px;
+      background: linear-gradient(rgba(19, 16, 13, .18), rgba(19, 16, 13, .55)), url("media-generation-hearth-hero-0-38611197-1f48-47e4-8359-bd7eeb17c243.webp") 76% center / cover no-repeat;
+    }
+    .feature-copy { padding: clamp(34px, 6vw, 70px); }
+    .feature-copy .kicker { color: #e8834d; }
+    .feature h3 { font-size: clamp(2.4rem, 4.6vw, 4.7rem); margin-bottom: 20px; }
+    .feature p { color: #dcd3c7; max-width: 530px; }
+    .detail-list { list-style: none; padding: 0; margin: 28px 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 12px 24px; }
+    .detail-list li { position: relative; padding-left: 24px; }
+    .detail-list li::before { content: "◆"; position: absolute; left: 0; color: #e8834d; font-size: .75em; top: .25em; }
+    .journal-card { display: grid; grid-template-columns: 190px 1fr; gap: 32px; background: var(--paper); border: 1px solid var(--line-soft); padding: 28px; }
+    .journal-date { border-right: 1px solid var(--line); padding-right: 28px; }
+    .journal-date strong { display: block; font-family: var(--display); font-size: 1.55rem; }
+    .journal-date span { color: var(--muted); }
+    .journal-body h3 { font-size: 2rem; margin-bottom: 8px; }
+    .journal-body p { margin: 0; color: var(--muted); }
+    .next-callout {
+      margin-top: 22px;
+      padding: 22px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      background: var(--paper-2);
+      border-left: 5px solid var(--ember);
+    }
+    .next-callout strong { font-family: var(--display); font-size: 1.3rem; }
+    .next-callout span { color: var(--muted); text-align: right; }
+    footer { background: var(--wood-deep); color: #ddd1bf; }
+    .footer-inner { width: min(1120px, calc(100% - 40px)); margin: auto; padding: 36px 0; display: flex; justify-content: space-between; gap: 30px; }
+    .footer-inner strong { font-family: var(--display); color: #fff4e2; font-size: 1.25rem; }
+    .footer-inner span { color: #bfb3a2; }
+    @media (max-width: 760px) {
+      .hero { min-height: 700px; background-position: 82% center; }
+      .hero::before { background: linear-gradient(180deg, rgba(13,15,14,.08) 0%, rgba(13,15,14,.48) 43%, rgba(13,15,14,.96) 100%); }
+      .hero-inner { width: min(100% - 30px, 1180px); padding-bottom: 78px; }
+      h1 { font-size: clamp(3.4rem, 18vw, 5.2rem); }
+      .jumpbar { width: calc(100% - 30px); margin-top: -22px; }
+      .jumpbar a { flex: 1 1 50%; padding: 14px 10px; font-size: .92rem; }
+      .jumpbar a:nth-child(2) { border-right: 0; }
+      .jumpbar a:nth-child(-n+2) { border-bottom: 1px solid rgba(255,255,255,.16); }
+      .section { width: calc(100% - 30px); }
+      .section-head, .vision-grid, .comparison, .feature, .journal-card { grid-template-columns: 1fr; }
+      .section-head { gap: 18px; }
+      .vision-copy { box-shadow: 7px 7px 0 color-mix(in srgb, var(--line) 50%, transparent); }
+      .photo-slot { min-height: 280px; }
+      .photo-slot + .photo-slot { border-left: 0; border-top: 1px solid var(--line); }
+      .gallery-caption, .footer-inner, .next-callout { flex-direction: column; align-items: flex-start; }
+      .gallery-caption span, .next-callout span { text-align: left; }
+      .progress-track { grid-template-columns: 1fr; }
+      .stage { min-height: auto; }
+      .stage h3 { margin-top: 22px; }
+      .feature-art { min-height: 340px; }
+      .detail-list { grid-template-columns: 1fr; }
+      .journal-date { border-right: 0; border-bottom: 1px solid var(--line); padding: 0 0 18px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="identity">
+        <p class="chapter">The build journal</p>
+        <h1>Mogollon's Hearth</h1>
+        <p class="tagline">Where the Rim touches the Sky</p>
+        <p class="intro">A Skyrim-inspired guest house taking shape among the pines of Arizona's Mogollon Rim.</p>
+      </div>
+    </div>
+  </header>
+
+  <nav class="jumpbar" aria-label="Page sections">
+    <a href="#vision">The vision</a>
+    <a href="#before-after">Before &amp; after</a>
+    <a href="#progress">Progress</a>
+    <a href="#journal">Build notes</a>
+  </nav>
+
+  <main>
+    <section class="section" id="vision">
+      <div class="section-head">
+        <div>
+          <p class="kicker">The north star</p>
+          <h2>A guest house with a story</h2>
+        </div>
+        <p class="section-lede">Not a themed room assembled from props—a full-scale, hand-built retreat with the warmth, weight, and character of an old Nordic inn.</p>
+      </div>
+      <div class="vision-grid">
+        <div class="vision-copy">
+          <p>Rough timber. Firelight. Carved knotwork. A place that feels discovered rather than decorated.</p>
+        </div>
+        <aside class="vision-note">
+          <h3>The friendly innkeeper</h3>
+          <p>The Mogollon Monster is the hearth's smiling mascot. A monster doesn't have to be mean—this one raises a mug in welcome.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="before-after">
+      <div class="section-head">
+        <div>
+          <p class="kicker">Room by room</p>
+          <h2>Before &amp; after</h2>
+        </div>
+        <p class="section-lede">Matching viewpoints will make each transformation easy to compare. The first pair will take this place as soon as the photos arrive.</p>
+      </div>
+      <div class="gallery-shell">
+        <div class="comparison" aria-label="Reserved spaces for a before and after photo pair">
+          <div class="photo-slot">
+            <div class="slot-copy">
+              <span class="slot-label">Before</span>
+              <small>The starting room, framed from a repeatable viewpoint.</small>
+            </div>
+          </div>
+          <div class="photo-slot">
+            <div class="slot-copy">
+              <span class="slot-label">After</span>
+              <small>The finished view will sit beside it for a true comparison.</small>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <strong>First comparison waiting for photos</strong>
+          <span>Best match: same corner, lens height, and daylight.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="progress">
+      <div class="section-head">
+        <div>
+          <p class="kicker">Between the endpoints</p>
+          <h2>The build in motion</h2>
+        </div>
+        <p class="section-lede">Progress photos will preserve the parts that disappear—the test fits, raw materials, carved details, and clever fixes behind the finished room.</p>
+      </div>
+      <div class="progress-track">
+        <article class="stage is-now">
+          <span class="stage-num">01</span>
+          <h3>Starting point</h3>
+          <p>Wide room views and details worth preserving before work begins.</p>
+        </article>
+        <article class="stage">
+          <span class="stage-num">02</span>
+          <h3>Work in progress</h3>
+          <p>Fabrication, installation, finish tests, and the discoveries made along the way.</p>
+        </article>
+        <article class="stage">
+          <span class="stage-num">03</span>
+          <h3>Finished chapter</h3>
+          <p>The reveal, close-up craftsmanship, and a note about what changed.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="first-chapter-heading">
+      <div class="feature">
+        <div class="feature-art" role="img" aria-label="Illustrated Nordic hearth with carved wood, stonework and a round shield"></div>
+        <div class="feature-copy">
+          <p class="kicker">Featured build</p>
+          <h3 id="first-chapter-heading">The tavern sign</h3>
+          <p>A shield-shaped wooden plaque introduces the house and its genial guardian: the Mogollon Monster, waving with a mug beside the fire.</p>
+          <ul class="detail-list">
+            <li>Arched “Mogollon's Hearth” lettering</li>
+            <li>Nordic knotwork and dragon heads</li>
+            <li>Waving monster beside the fireplace</li>
+            <li>“Where the Rim touches the Sky”</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="journal">
+      <div class="section-head">
+        <div>
+          <p class="kicker">Notes from the workshop</p>
+          <h2>Build journal</h2>
+        </div>
+        <p class="section-lede">Short entries will keep the decisions and stories with the pictures, so the finished project still remembers how it was made.</p>
+      </div>
+      <article class="journal-card">
+        <div class="journal-date">
+          <strong>Opening entry</strong>
+          <span>Date to be added</span>
+        </div>
+        <div class="journal-body">
+          <h3>The hearth gets a home of its own</h3>
+          <p>The project page is ready for its first real photos: an opening “before” view, close-ups from the workshop, and the matching “after” view when each chapter is complete.</p>
+        </div>
+      </article>
+      <div class="next-callout">
+        <strong>Next addition</strong>
+        <span>Send a photo with a short note about what changed; it can become the next journal entry.</span>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <strong>Built on the Mogollon Rim</strong>
+      <span>Guest house project journal · Payson, Arizona</span>
+    </div>
+  </footer>
+</body>
+</html>
