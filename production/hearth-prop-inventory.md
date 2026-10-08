@@ -1,6 +1,6 @@
-# Mogollon's Hearth — Prop Inventory & Skyrim Uses
+# Mogollon's Hearth — Prop Inventory
 
-*Logged October 8, 2026. Source: Arizona Gift Center (picked up Oct 7). IDs marked (?) are best guesses from photos.*
+*IDs marked (?) are best guesses from photos. Numbering is just to identify items.*
 
 ## Soul gems & light
 
