@@ -44,7 +44,7 @@
   thead th.no-sort:hover { background: var(--wood-deep); }
   tbody tr:hover { background: var(--paper-2); }
   td:first-child { font-weight: 700; color: var(--ember); white-space: nowrap; }
-  td img { width: 72px; height: 72px; object-fit: cover; display: block; border: 1px solid var(--line-soft); background: var(--paper-2); }
+  td img { width: 72px; height: 72px; object-fit: contain; display: block; border: 1px solid var(--line-soft); background: var(--paper-2); }
   #status { padding: 40px; text-align: center; color: var(--muted); }
   .err { color: #a33; }
 </style>
@@ -88,10 +88,10 @@
       if (cells.length < 5) continue;
       if (/^:?-{2,}:?$/.test(cells[0])) continue;      // separator row
       if (!/^\d+$/.test(cells[0])) continue;           // header row
-      var photo = '';
-      var m = cells[1].match(/!\[.*?\]\((.*?)\)/);
-      if (m) photo = m[1];
-      out.push({ n: parseInt(cells[0], 10), photo: photo, item: cells[2], use: cells[3], notes: cells[4] });
+      var photos = [];
+      var re = /!\[.*?\]\((.*?)\)/g, m;
+      while ((m = re.exec(cells[1])) photos.push(m[1]);
+      out.push({ n: parseInt(cells[0], 10), photos: photos, item: cells[2], use: cells[3], notes: cells[4] });
     }
     return out;
   }
@@ -111,9 +111,9 @@
       body.innerHTML = '<tr><td colspan="5" id="status">No items match.</td></tr>';
     } else {
       body.innerHTML = list.map(function (r) {
-        var img = r.photo
-          ? '<img src="' + r.photo + '" alt="Item ' + r.n + ' photo" loading="lazy">'
-          : '';
+        var img = r.photos.map(function (p, i) {
+          return '<a href="item.html?n=' + r.n + '"><img src="' + p + '?v=2" alt="Item ' + r.n + ' photo ' + (i + 1) + '" loading="lazy"></a>';
+        }).join('');
         return '<tr><td>' + r.n + '</td><td>' + img + '</td><td>' +
           esc(r.item) + '</td><td>' + esc(r.use) + '</td><td>' + esc(r.notes) + '</td></tr>';
       }).join('');

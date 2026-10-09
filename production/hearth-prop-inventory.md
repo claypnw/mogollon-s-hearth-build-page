@@ -15,7 +15,7 @@
 | 5 | ![5](../props/prop-05-obsidian-sphere.jpg) | Obsidian sphere on wood stand | Black soul gem — centerpiece of the soul-gem display | |
 | 6 | ![6](../props/prop-06-obsidian-egg.jpg) | Obsidian egg (polished black) | Second black soul gem, or a scrying stone | |
 | 7 | ![7](../props/prop-07-tower.jpg) | Tall banded tower / obelisk | Standing-stone miniature, or altar centerpiece on the large LED base | |
-| 8 | ![8](../props/prop-08-tree-tall.jpg) | Crystal trees (×2, one tall w/ green stones) | Enchanted flora for altar corners | |
+| 8 | ![8](../props/prop-08-tree-small.jpg) | Crystal trees (×2, one tall w/ green stones) | Enchanted flora for altar corners | |
 
 ## The alchemy lab
 

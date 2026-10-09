@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Prop item — Mogollon's Hearth</title>
+<style>
+  :root {
+    --bg: #e7e1d4; --paper: #f3eee3; --paper-2: #ddd4c3;
+    --ink: #211e19; --muted: #5d584f; --line: #8f8068;
+    --line-soft: rgba(80, 68, 51, .22);
+    --wood: #542d1b; --wood-deep: #2f1a12; --ember: #b54f24;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: "Source Sans 3", "Trebuchet MS", sans-serif;
+    font-size: 17px; line-height: 1.55; padding: 24px 16px 70px;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .back { margin: 0 0 18px; font-size: .95rem; }
+  .back a { color: var(--wood); }
+  h1 { font-family: Georgia, serif; margin: 0 0 4px; font-size: 1.9rem; }
+  .section-tag {
+    display: inline-block; background: var(--wood-deep); color: #f7edde;
+    font-size: .8rem; padding: 3px 12px; border-radius: 20px; margin-bottom: 14px;
+  }
+  .photos { display: flex; flex-wrap: wrap; gap: 12px; margin: 0 0 18px; }
+  .photos img {
+    max-width: 100%; height: auto; max-height: 420px;
+    border: 1px solid var(--line-soft); background: var(--paper);
+    box-shadow: 0 10px 26px rgba(40,29,18,.16);
+  }
+  .field { margin: 0 0 14px; }
+  .field .k {
+    font-family: Georgia, serif; font-weight: 700; color: var(--wood);
+    font-size: .95rem; margin-bottom: 2px;
+  }
+  .card {
+    background: var(--paper); border: 1px solid var(--line-soft);
+    border-radius: 10px; padding: 20px; box-shadow: 0 12px 30px rgba(40,29,18,.14);
+  }
+  .btn {
+    display: inline-block; border: none; cursor: pointer; font: inherit; font-weight: 700;
+    background: var(--ember); color: #fff8ee; padding: 14px 28px; border-radius: 10px;
+    margin-top: 18px; font-size: 1.05rem;
+  }
+  .btn:active { transform: translateY(2px); }
+  .btn.ghost { background: transparent; color: var(--wood); border: 2px solid var(--line); }
+  label { display: block; font-weight: 700; font-family: Georgia, serif; color: var(--wood); margin: 16px 0 6px; }
+  input[type=text], textarea {
+    width: 100%; font: inherit; padding: 12px; border: 1px solid var(--line);
+    border-radius: 8px; background: #fffdf8; color: var(--ink);
+  }
+  textarea { min-height: 90px; resize: vertical; }
+  .photolist { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
+  .photoitem { position: relative; }
+  .photoitem img { width: 120px; height: 120px; object-fit: contain; background: var(--paper-2); border: 1px solid var(--line-soft); display: block; }
+  .photoitem button {
+    position: absolute; top: 4px; right: 4px; border: none; cursor: pointer;
+    background: #a33; color: #fff; border-radius: 50%; width: 30px; height: 30px; font-size: 16px; line-height: 1;
+  }
+  .photoitem.new img { outline: 3px solid var(--ember); }
+  #status { margin-top: 16px; padding: 14px; border-radius: 8px; display: none; }
+  #status.ok { display: block; background: #e2efe0; border: 1px solid #7a9c76; }
+  #status.err { display: block; background: #f7e3e3; border: 1px solid #b56a6a; }
+  #tokenbox { display: none; margin-top: 18px; }
+  #tokenbox.open { display: block; }
+  #tokenbox ol { margin: 8px 0; padding-left: 22px; }
+  #tokenbox li { margin-bottom: 8px; }
+  .hint { color: var(--muted); font-size: .92rem; }
+  .hidden { display: none !important; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="back"><a href="inventory.html">&larr; All props</a> &nbsp;&middot;&nbsp; <a href="../index.html#props">Hearth build page</a></p>
+
+  <div id="loading"><p>Loading the item&hellip;</p></div>
+
+  <div id="view" class="hidden">
+    <span class="section-tag" id="v-section"></span>
+    <h1><span id="v-num"></span>. <span id="v-item"></span></h1>
+    <div class="photos" id="v-photos"></div>
+    <div class="card">
+      <div class="field"><div class="k">Where / how used</div><div id="v-use"></div></div>
+      <div class="field"><div class="k">Notes</div><div id="v-notes"></div></div>
+    </div>
+    <button class="btn" id="editbtn">Edit this item</button>
+  </div>
+
+  <div id="edit" class="hidden">
+    <h1>Edit item <span id="e-num"></span></h1>
+    <p class="hint">Change what you need, then tap Save. Your changes go straight into the master inventory.</p>
+    <div class="card">
+      <label for="f-item">Item</label>
+      <input type="text" id="f-item" />
+      <label for="f-use">Where / how used</label>
+      <textarea id="f-use"></textarea>
+      <label for="f-notes">Notes</label>
+      <textarea id="f-notes"></textarea>
+      <label>Photos</label>
+      <p class="hint" style="margin:0 0 6px">Tap &times; to remove a photo. Add new ones below.</p>
+      <div class="photolist" id="e-photos"></div>
+      <label for="f-newphoto" style="margin-top:14px">Add a photo</label>
+      <input type="file" id="f-newphoto" accept="image/*" />
+    </div>
+    <button class="btn" id="savebtn">Save changes</button>
+    <button class="btn ghost" id="cancelbtn">Cancel</button>
+    <div id="status"></div>
+
+    <div id="tokenbox" class="card">
+      <h2 style="font-family:Georgia,serif;margin-top:0">One-time setup: your GitHub key</h2>
+      <p>Saving needs a key from GitHub &mdash; a long secret code, like a spare key that only opens one door: your Hearth inventory. You make it, you paste it here once, it stays saved in this browser on your phone. Dude never sees it, and you can throw it away anytime.</p>
+      <ol>
+        <li>On <b>github.com</b>, tap your picture (top right) &rarr; <b>Settings</b>.</li>
+        <li>Scroll the left menu to the very bottom &rarr; <b>Developer settings</b>.</li>
+        <li><b>Personal access tokens</b> &rarr; <b>Fine-grained tokens</b> &rarr; <b>Generate new token</b>.</li>
+        <li>Name it <b>hearth-inventory</b>. Set expiration to <b>1 year</b>.</li>
+        <li>Under <b>Repository access</b> choose <b>Only select repositories</b> &rarr; pick <b>mogollon-s-hearth-build-page</b>.</li>
+        <li>Under <b>Permissions</b> &rarr; <b>Repository permissions</b> &rarr; <b>Contents</b> &rarr; <b>Read and write</b>.</li>
+        <li><b>Generate token</b>, then <b>copy</b> the code it shows.</li>
+      </ol>
+      <label for="f-token">Paste your key here</label>
+      <input type="text" id="f-token" autocomplete="off" autocapitalize="off" spellcheck="false" />
+      <button class="btn" id="tokenbtn">Save key and continue</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  'use strict';
+  var REPO = 'claypnw/mogollon-s-hearth-build-page';
+  var API = 'https://api.github.com/repos/' + REPO + '/contents/';
+  var params = new URLSearchParams(location.search);
+  var num = parseInt(params.get('n'), 10);
+  var item = null, allLines = null;
+
+  function $(id) { return document.getElementById(id); }
+  function esc(t) {
+    return String(t == null ? '' : t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+  function show(id) { $(id).classList.remove('hidden'); }
+  function hide(id) { $(id).classList.add('hidden'); }
+  function status(msg, ok) {
+    var s = $('status');
+    s.className = ok ? 'ok' : 'err';
+    s.textContent = msg;
+  }
+
+  function parseMD(text) {
+    var items = [], section = '', lines = text.split('\n');
+    for (var i = 0; i < lines.length; i++) {
+      var h = lines[i].match(/^##\s+(.*)/);
+      if (h) { section = h[1].trim(); continue; }
+      var t = lines[i].trim();
+      if (!/^\|/.test(t)) continue;
+      var cells = t.split('|').slice(1, -1).map(function (c) { return c.trim(); });
+      if (cells.length < 5) continue;
+      if (/^:?-{2,}:?$/.test(cells[0])) continue;
+      if (!/^\d+$/.test(cells[0])) continue;
+      var photos = [], re = /!\[.*?\]\((.*?)\)/g, m;
+      while ((m = re.exec(cells[1]))) photos.push(m[1]);
+      items.push({ n: parseInt(cells[0], 10), photos: photos, item: cells[2],
+                   use: cells[3], notes: cells[4], section: section, lineIndex: i });
+    }
+    return { items: items, lines: lines };
+  }
+
+  function renderView() {
+    $('v-num').textContent = item.n;
+    $('v-item').textContent = item.item;
+    $('v-section').textContent = item.section || 'Props';
+    $('v-use').textContent = item.use || '—';
+    $('v-notes').textContent = item.notes || '—';
+    $('v-photos').innerHTML = item.photos.map(function (p) {
+      return '<img src="' + esc(p) + '" alt="Item ' + item.n + ' photo">';
+    }).join('') || '<p class="hint">No photo yet — tap Edit to add one.</p>';
+    document.title = 'Item ' + item.n + ' — ' + item.item;
+  }
+
+  var editPhotos = [];   // {path} kept, or {file, name, dataUrl} new
+  var newFiles = [];
+
+  function renderEditPhotos() {
+    $('e-photos').innerHTML = '';
+    editPhotos.forEach(function (p, i) {
+      var d = document.createElement('div');
+      d.className = 'photoitem' + (p.dataUrl ? ' new' : '');
+      var img = document.createElement('img');
+      img.src = p.dataUrl || p.path;
+      img.alt = 'photo ' + (i + 1);
+      var b = document.createElement('button');
+      b.textContent = '×';
+      b.setAttribute('aria-label', 'Remove photo');
+      b.onclick = function () { editPhotos.splice(i, 1); renderEditPhotos(); };
+      d.appendChild(img); d.appendChild(b);
+      $('e-photos').appendChild(d);
+    });
+  }
+
+  function openEdit() {
+    hide('view'); show('edit');
+    $('e-num').textContent = item.n;
+    $('f-item').value = item.item;
+    $('f-use').value = item.use;
+    $('f-notes').value = item.notes;
+    editPhotos = item.photos.map(function (p) { return { path: p }; });
+    newFiles = [];
+    $('f-newphoto').value = '';
+    renderEditPhotos();
+    hide('tokenbox');
+    $('status').className = ''; $('status').style.display = 'none';
+  }
+
+  $('f-newphoto').addEventListener('change', function (e) {
+    var f = e.target.files[0];
+    if (!f) return;
+    var rd = new FileReader();
+    rd.onload = function () {
+      editPhotos.push({ file: f, name: f.name, dataUrl: rd.result });
+      renderEditPhotos();
+    };
+    rd.readAsDataURL(f);
+    e.target.value = '';
+  });
+
+  function token() { return localStorage.getItem('hearth_gh_token') || ''; }
+
+  function gh(path, method, body) {
+    return fetch(API + path, {
+      method: method,
+      headers: {
+        'Authorization': 'Bearer ' + token(),
+        'Accept': 'application/vnd.github+json',
+        'Content-Type': 'application/json'
+      },
+      body: body ? JSON.stringify(body) : undefined
+    }).then(function (r) {
+      return r.json().then(function (j) { return { ok: r.ok, status: r.status, json: j }; });
+    });
+  }
+
+  function b64encode(str) { return btoa(unescape(encodeURIComponent(str))); }
+  function b64decode(b64) { return decodeURIComponent(escape(atob(b64.replace(/\n/g, '')))); }
+  function cleanText(s) {
+    return String(s == null ? '' : s).replace(/\|/g, '¦').replace(/\r?\n/g, ' ').trim();
+  }
+  function safeName(name, taken) {
+    var base = name.toLowerCase().replace(/[^a-z0-9.]+/g, '-').replace(/^-+|-+$/g, '') || 'photo.jpg';
+    if (!/\.(jpe?g|png|webp|gif)$/.test(base)) base += '.jpg';
+    var cand = 'prop-' + item.n + '-' + base, k = 2;
+    while (taken.indexOf(cand) !== -1) {
+      cand = 'prop-' + item.n + '-' + base.replace(/(\.[a-z]+)$/, '-' + (k++) + '$1');
+    }
+    return cand;
+  }
+
+  function doSave() {
+    if (!token()) {
+      $('tokenbox').classList.add('open');
+      status('Paste your GitHub key below first — one time only.', false);
+      return;
+    }
+    status('Saving…', true);
+    $('savebtn').disabled = true;
+
+    var taken = editPhotos.filter(function (p) { return p.path; })
+      .map(function (p) { return p.path.split('/').pop(); });
+    var uploads = [];
+    editPhotos.forEach(function (p) {
+      if (p.dataUrl) {
+        var fname = safeName(p.name, taken.concat(uploads.map(function (u) { return u.fname; })));
+        uploads.push({ fname: fname, dataUrl: p.dataUrl });
+        p.path = '../props/' + fname;
+        delete p.dataUrl; delete p.file; delete p.name;
+      }
+    });
+
+    var chain = Promise.resolve();
+    uploads.forEach(function (u) {
+      chain = chain.then(function () {
+        return gh('props/' + u.fname, 'PUT', {
+          message: 'Add prop photo ' + u.fname + ' via item page',
+          content: u.dataUrl.split(',')[1]
+        });
+      }).then(function (r) {
+        if (!r.ok) throw new Error('Photo upload failed (HTTP ' + r.status + ').');
+      });
+    });
+
+    chain.then(function () { return gh('production/hearth-prop-inventory.md', 'GET'); })
+      .then(function (r) {
+        if (!r.ok) throw new Error('Could not read the inventory (HTTP ' + r.status + ').');
+        var text = b64decode(r.json.content);
+        var parsed = parseMD(text);
+        var target = null;
+        parsed.items.forEach(function (it) { if (it.n === item.n) target = it; });
+        if (!target) throw new Error('Item ' + item.n + ' is no longer in the inventory.');
+        target.item = cleanText($('f-item').value);
+        target.use = cleanText($('f-use').value);
+        target.notes = cleanText($('f-notes').value);
+        target.photos = editPhotos.map(function (p) { return p.path; });
+        var ph = target.photos.map(function (p, i) {
+          return '![' + target.n + String.fromCharCode(97 + i) + '](' + p + ')';
+        }).join(' ');
+        parsed.lines[target.lineIndex] =
+          '| ' + target.n + ' | ' + ph + ' | ' + target.item + ' | ' + target.use + ' | ' + target.notes + ' |';
+        return gh('production/hearth-prop-inventory.md', 'PUT', {
+          message: 'Update prop item ' + item.n + ' via item page',
+          content: b64encode(parsed.lines.join('\n')),
+          sha: r.json.sha
+        });
+      })
+      .then(function (r) {
+        if (!r.ok) throw new Error('Could not save (HTTP ' + r.status + '). Your key may be wrong or expired.');
+        item.item = cleanText($('f-item').value);
+        item.use = cleanText($('f-use').value);
+        item.notes = cleanText($('f-notes').value);
+        item.photos = editPhotos.map(function (p) { return p.path; });
+        renderView();
+        hide('edit'); show('view');
+        status('', true);
+        $('status').style.display = 'none';
+      })
+      .catch(function (err) {
+        status('Not saved: ' + err.message + ' Nothing was changed.', false);
+      })
+      .then(function () { $('savebtn').disabled = false; });
+  }
+
+  $('editbtn').addEventListener('click', openEdit);
+  $('cancelbtn').addEventListener('click', function () { hide('edit'); show('view'); });
+  $('savebtn').addEventListener('click', doSave);
+  $('tokenbtn').addEventListener('click', function () {
+    var v = $('f-token').value.trim();
+    if (!v) { status('Paste the key first.', false); return; }
+    localStorage.setItem('hearth_gh_token', v);
+    $('f-token').value = '';
+    $('tokenbox').classList.remove('open');
+    doSave();
+  });
+
+  // boot
+  fetch('hearth-prop-inventory.md', { cache: 'no-store' })
+    .then(function (res) {
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      return res.text();
+    })
+    .then(function (text) {
+      var parsed = parseMD(text);
+      allLines = parsed.lines;
+      if (!num) throw new Error('no item number');
+      parsed.items.forEach(function (it) { if (it.n === num) item = it; });
+      if (!item) throw new Error('not found');
+      hide('loading'); show('view');
+      renderView();
+    })
+    .catch(function () {
+      $('loading').innerHTML = '<p>Could not find that item. <a href="inventory.html">Back to all props</a>.</p>';
+    });
+})();
+</script>
+</body>
+</html>
