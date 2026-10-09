@@ -1,56 +1,56 @@
-# Mogollon's Hearth — Prop Inventory
+# My Mogollon's Hearth Props
 
-*IDs marked (?) are best guesses from photos. Numbering is just to identify items.*
+*Numbering is just to identify items.*
 
 ## Soul gems & light
 
-| # | Item | Skyrim use |
-|---|------|-----------|
-| 1 | Wooden LED base, small, USB w/ switch | Lighted soul-gem stand — set a quartz point or egg on it |
-| 2 | Wooden LED base, large, USB w/ switch | Lighted stand for the tall tower or obsidian sphere |
-| 3 | Blue titanium aura quartz points (×4 at least) | **Soul gems** — the aura coating reads as enchanted. Lit from below on the wood bases |
-| 4 | Polished stone eggs — red, blue, yellow | **Soul gems by size**: red = greater, blue = common, yellow = lesser. Bowl them together |
-| 5 | Obsidian sphere on wood stand | **Black soul gem** — centerpiece of the soul-gem display |
-| 6 | Obsidian egg (polished black) | Second black soul gem, or a scrying stone |
-| 7 | Tall banded tower/obelisk | Standing-stone miniature, or altar centerpiece on the large LED base |
-| 8 | Crystal trees (×2, one tall w/ green stones) | Enchanted flora for altar corners — like the glowing plants in alchemist shops |
+| # | Item | Where/how used | Notes |
+|---|------|----------------|-------|
+| 1 | Wooden LED base, small, USB w/ switch | Lighted soul-gem stand — set a quartz point or egg on it | |
+| 2 | Wooden LED base, large, USB w/ switch | Lighted stand for the tall tower or obsidian sphere | |
+| 3 | Blue titanium aura quartz points (×4 at least) | Soul gems — lit from below on the wood LED bases | |
+| 4 | Polished stone eggs — red, blue, yellow | Soul gems by size — red = greater, blue = common, yellow = lesser; bowl together | |
+| 5 | Obsidian sphere on wood stand | Black soul gem — centerpiece of the soul-gem display | |
+| 6 | Obsidian egg (polished black) | Second black soul gem, or a scrying stone | |
+| 7 | Tall banded tower / obelisk | Standing-stone miniature, or altar centerpiece on the large LED base | |
+| 8 | Crystal trees (×2, one tall w/ green stones) | Enchanted flora for altar corners | |
 
 ## The alchemy lab
 
-| # | Item | Skyrim use |
-|---|------|-----------|
-| 9 | Onyx/marble mortar and pestle | **Alchemy station** — the single most Skyrim-correct item here. Arcadia's Cauldron energy |
-| 10 | Bright yellow sulfur cluster | **Fire salts / brimstone** — ingredient display in a dish |
-| 11 | Peridot chips (bag labeled) | **Glow dust** — pour into a small bowl as loose ingredients |
-| 12 | Yellow chips (bag, looks like sulfur/calcite) | **Salt pile / moon sugar** — ingredient bowl |
-| 13 | Goldstone chips in tube | **Gold dust** — apothecary vial |
-| 14 | Green chips in corked vial | **Potion ingredient** — corked apothecary bottle, ready-made |
-| 15 | Abalone shell | **Ingredient bowl** — the iridescence reads as Hagraven-made. Holds the chips |
-| 16 | Small banded onyx bowl | Second ingredient bowl |
+| # | Item | Where/how used | Notes |
+|---|------|----------------|-------|
+| 9 | Onyx/marble mortar and pestle | Alchemy station — centerpiece; Arcadia's Cauldron energy | |
+| 10 | Bright yellow sulfur cluster | Fire salts / brimstone — ingredient display in a dish | |
+| 11 | Peridot chips (bag, labeled) | Glow dust — pour into a small bowl as loose ingredients | |
+| 12 | Yellow chips (bag — sulfur/calcite) | Salt pile / moon sugar — ingredient bowl | |
+| 13 | Goldstone chips in tube | Gold dust — apothecary vial | |
+| 14 | Green chips in corked vial | Potion ingredient — ready-made corked apothecary bottle | |
+| 15 | Abalone shell | Ingredient bowl — Hagraven-made look; holds the chips | |
+| 16 | Small banded onyx bowl | Second ingredient bowl at the alchemy station | |
 
 ## Dwemer corner
 
-| # | Item | Skyrim use |
-|---|------|-----------|
-| 17 | Bismuth cluster (rainbow geometric) | **Dwemer metal** — nothing says Dwemer like rainbow stair-step crystals |
-| 18 | Copper nugget pieces | **Dwemer scrap** — scatter around the bismuth as ruins debris |
-| 19 | Dark metallic raw mineral (?) | **Ebony ore** chunk |
+| # | Item | Where/how used | Notes |
+|---|------|----------------|-------|
+| 17 | Bismuth cluster (rainbow geometric) | Dwemer metal — grouped on the Dwemer shelf | |
+| 18 | Copper nugget pieces | Dwemer scrap — scatter around the bismuth as ruins debris | |
+| 19 | Dark metallic raw mineral | Ebony ore chunk — Dwemer shelf | Photo ID tentative — confirm in hand. |
 
 ## Crypt & dungeon dressing
 
-| # | Item | Skyrim use |
-|---|------|-----------|
-| 20 | Skull-shaped planter (dark) | **Draugr crypt** — plant something spiky in it (a "deathbell"). Instant dungeon |
-| 21 | Selenite bowl + carved heart stone (?) | **Heart Stone** (Dragonborn DLC) — offering bowl with the heart displayed in it |
-| 22 | Raw stones — brown, reddish, banded (?) | **Ore samples** — iron, corundum, stone. Line a shelf like a mine assay office |
-| 23 | Fossil/coral cross-section stone (?) | **Ancient nord artifact** — display piece |
+| # | Item | Where/how used | Notes |
+|---|------|----------------|-------|
+| 20 | Skull-shaped planter (dark) | Draugr crypt corner — plant something spiky in it (a “deathbell”) | |
+| 21 | Selenite bowl + carved heart stone | Heart Stone (Dragonborn) — offering bowl with the heart displayed in it | Photo ID tentative — confirm in hand. |
+| 22 | Raw stones — brown, reddish, banded | Ore samples — iron, corundum, stone; line a shelf like a mine assay office | Photo ID tentative — confirm in hand. |
+| 23 | Fossil / coral cross-section stone | Ancient Nord artifact — display piece | Photo ID tentative — confirm in hand. |
 
 ## Talismans & trinkets
 
-| # | Item | Skyrim use |
-|---|------|-----------|
-| 24 | Framed amber pendants/keychains (×4) | **Amber** (Dragonborn DLC) — hang as talismans, or gift to guests as Hearth tokens |
-| 25 | 2 round stones/coins in plastic (?) | **Septims** — scatter in an offering bowl |
+| # | Item | Where/how used | Notes |
+|---|------|----------------|-------|
+| 24 | Framed amber pendants / keychains (×4) | Amber (Dragonborn) — hang as talismans or gift to guests as Hearth tokens | |
+| 25 | 2 round stones / coins in plastic | Septims — scatter in an offering bowl | Photo ID tentative — confirm in hand. |
 
 ## Suggested groupings (vignettes)
 
