@@ -54,6 +54,33 @@
 | 24 | ![24](../props/prop-24-amber.jpg) | Framed amber pendants / keychains (×4) | Amber (Dragonborn) — hang as talismans or gift to guests as Hearth tokens | |
 | 25 | ![25](../props/prop-25-coins.jpg) | 2 round stones / coins in plastic | Septims — scatter in an offering bowl | Photo ID tentative — confirm in hand. |
 
+## Thrift haul — Oct 9, 2026
+
+| # | Photo | Item | Where/how used | Notes |
+|---|-------|----------------|-------|-------|
+| 26 | ![26](../props/prop-26-wooden-box.jpg) | Wooden keepsake box (open, lined) | Quest-reward chest — holds small treasures or guest tokens | |
+| 27 | ![27](../props/prop-27-black-goblet.jpg) | Black glass goblet with lid | Ebony chalice — mead-hall table centerpiece | |
+| 28 | ![28](../props/prop-28-mini-bottles.jpg) | Mini glass bottles with striped straws (×2) | Potion vials — alchemy shelf dressing | |
+| 29 | ![29](../props/prop-29-ceramic-vase.jpg) | Brown/green ceramic vase | Alchemy ingredient vase — dried flora display | |
+| 30 | ![30](../props/prop-30-black-pot.jpg) | Black cauldron pot | Small alchemy cauldron — ingredient pot | |
+| 31 | ![31](../props/prop-31-gold-trim.jpg) | Gold jingle bells + gold bead tube | Gilded trim — Yule decorations or Dwemer gold bits | |
+| 32 | ![32](../props/prop-32-wall-planters.jpg) | Wooden wall pocket planters (×2) | Wall planters — hang with dried flora or deathbell | |
+| 33 | ![33](../props/prop-33-glass-bottles.jpg) | Glass bottles — bud vase + square decanter (×2) | Potion bottles — skooma decanter for the tavern shelf | |
+| 34 | ![34](../props/prop-34-astro-book.jpg) | Astro Bot children's book | Guest-room book — for visiting young adventurers | |
+| 35 | ![35](../props/prop-35-trivets.jpg) | Black metal trivets (×2) | Trivets — under candles or serving dishes in the mead hall | |
+| 36 | ![36](../props/prop-36-filler.jpg) | Shredded decorative filler, purple + red | Basket filler — for gift baskets or display nests | |
+| 37 | ![37](../props/prop-37-tissue.jpg) | Yellow tissue paper | Wrapping — for guest tokens and favors | |
+| 38 | ![38](../props/prop-38-mug-vase.jpg) | Black mug + amber bud vase | Tankard + bud vase — guest room dressing | |
+| 39 | ![39](../props/prop-39-apothecary-jar.jpg) | Tall glass apothecary jar with lid | Apothecary jar — loose ingredients display | |
+| 40 | ![40](../props/prop-40-square-jar.jpg) | Square glass jar with wooden lid | Ingredient jar — salt pile or moon sugar | |
+| 41 | ![41](../props/prop-41-cauldron.jpg) | Cast-iron cauldron with feet | Alchemy cauldron — the station's workhorse | |
+| 42 | ![42](../props/prop-42-leaf-dish.jpg) | Maple leaf dish (fall colors) | Serving dish — autumn feast table | |
+| 43 | ![43](../props/prop-43-glitter.jpg) | Glitter bottles — red, gold, silver (×3) | Craft glitter — for prop finishing | |
+| 44 | ![44](../props/prop-44-rhinestones.jpg) | Rhinestone sticker sheets (×4 colors) | Gem stickers — embellishing props and cards | |
+| 45 | ![45](../props/prop-45-skeletons.jpg) | Mini plastic skeletons (×3) | Draugr remains — crypt corner dressing | |
+| 46 | ![46](../props/prop-46-tier-stand.jpg) | Black metal tiered plate stand | Tiered display — for the alchemy station or feast table | |
+| 47 | ![47](../props/prop-47-leather-jacket.jpg) | Brown leather jacket | Traveler's garb — costume piece for the Hearth keeper | |
+
 ## Suggested groupings (vignettes)
 
 1. **Soul-gem altar** — both LED bases lit, aura points + eggs + obsidian sphere on/around them. Dark corner, maximum glow.
