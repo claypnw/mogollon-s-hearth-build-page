@@ -52,7 +52,7 @@
 <body>
 <div class="wrap">
   <h1>My Mogollon's Hearth Props</h1>
-  <p class="sub">Master view — reads the <a href="hearth-prop-inventory.md">master file</a> live. Edit that file on GitHub, then say "propagate". Tap a column heading to sort.</p>
+  <p class="sub">Master view — reads the <a href="hearth-prop-inventory.md">master file</a> live. Tap a column heading to sort. Tap a photo to open that item's page.</p>
   <div class="toolbar">
     <input id="search" type="search" placeholder="Search items…" aria-label="Search items" />
     <span id="count"></span>
@@ -89,8 +89,8 @@
       if (/^:?-{2,}:?$/.test(cells[0])) continue;      // separator row
       if (!/^\d+$/.test(cells[0])) continue;           // header row
       var photos = [];
-      var re = /!\[.*?\]\((.*?)\)/g, m;
-      while ((m = re.exec(cells[1])) photos.push(m[1]);
+      var m, re = /!\[.*?\]\((.*?)\)/g;
+      while ((m = re.exec(cells[1]))) photos.push(m[1]);
       out.push({ n: parseInt(cells[0], 10), photos: photos, item: cells[2], use: cells[3], notes: cells[4] });
     }
     return out;
