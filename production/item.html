@@ -260,6 +260,7 @@
 
   function doSave() {
     if (!token()) {
+      $('tokenbox').classList.remove('hidden');
       $('tokenbox').classList.add('open');
       status('Paste your GitHub key below first — one time only.', false);
       return;
@@ -329,6 +330,7 @@
         var msg = 'Not saved: ' + err.message + ' Nothing was changed.';
         if (/HTTP 40[13]/.test(err.message)) {
           try { localStorage.removeItem('hearth_gh_token'); } catch (e) {}
+          $('tokenbox').classList.remove('hidden');
           $('tokenbox').classList.add('open');
           msg += ' Your saved key was cleared — paste a fresh key below and tap "Save key and continue".';
         }
