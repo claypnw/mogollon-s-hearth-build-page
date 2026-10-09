@@ -239,6 +239,17 @@
       .journal-date { border-right: 0; border-bottom: 1px solid var(--line); padding: 0 0 18px; }
     }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  
+    .prop-wrap { overflow-x: auto; background: var(--paper); border: 1px solid var(--line-soft); box-shadow: 0 16px 38px var(--shadow); }
+    #prop-table { width: 100%; border-collapse: collapse; font-size: .95rem; }
+    #prop-table th, #prop-table td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--line-soft); vertical-align: top; }
+    #prop-table thead th { background: var(--wood-deep); color: #f7edde; font-family: var(--display); font-weight: 600; white-space: nowrap; cursor: pointer; user-select: none; }
+    #prop-table thead th:hover { background: var(--ember); }
+    #prop-table thead th .dir { color: #e8834d; margin-left: 6px; }
+    #prop-table tbody tr:hover { background: var(--paper-2); }
+    #prop-table td:first-child { font-weight: 700; color: var(--ember); white-space: nowrap; }
+    .prop-hint { margin: 0 0 14px; color: var(--muted); font-size: .95rem; }
+
   </style>
 </head>
 <body>
@@ -257,6 +268,7 @@
     <a href="#vision">The vision</a>
     <a href="#before-after">Before &amp; after</a>
     <a href="#progress">Progress</a>
+    <a href="#props">Prop inventory</a>
     <a href="#journal">Build notes</a>
   </nav>
 
@@ -354,6 +366,57 @@
       </div>
     </section>
 
+
+    <section class="section" id="props">
+      <div class="section-head">
+        <div>
+          <p class="kicker">The collection</p>
+          <h2>Prop inventory</h2>
+        </div>
+        <p class="section-lede">Every piece gathered for the house so far, and where each one will serve. Tap a column heading to sort.</p>
+      </div>
+      <p class="prop-hint">25 items · tap any column heading to sort · the full production document lives <a href="production/hearth-prop-inventory.md">here</a></p>
+      <div class="prop-wrap">
+        <table id="prop-table" aria-label="Mogollon's Hearth prop inventory, sortable">
+          <thead>
+            <tr>
+              <th data-type="num">#<span class="dir"></span></th>
+              <th data-type="str">Item<span class="dir"></span></th>
+              <th data-type="str">Where / how used<span class="dir"></span></th>
+              <th data-type="str">Notes<span class="dir"></span></th>
+            </tr>
+          </thead>
+          <tbody>
+          <tr><td data-v="1">1</td><td>Wooden LED base, small, USB w/ switch</td><td>Lighted soul-gem stand — set a quartz point or egg on it</td><td></td></tr>
+          <tr><td data-v="2">2</td><td>Wooden LED base, large, USB w/ switch</td><td>Lighted stand for the tall tower or obsidian sphere</td><td></td></tr>
+          <tr><td data-v="3">3</td><td>Blue titanium aura quartz points (×4 at least)</td><td>Soul gems — lit from below on the wood LED bases</td><td></td></tr>
+          <tr><td data-v="4">4</td><td>Polished stone eggs — red, blue, yellow</td><td>Soul gems by size — red = greater, blue = common, yellow = lesser; bowl together</td><td></td></tr>
+          <tr><td data-v="5">5</td><td>Obsidian sphere on wood stand</td><td>Black soul gem — centerpiece of the soul-gem display</td><td></td></tr>
+          <tr><td data-v="6">6</td><td>Obsidian egg (polished black)</td><td>Second black soul gem, or a scrying stone</td><td></td></tr>
+          <tr><td data-v="7">7</td><td>Tall banded tower / obelisk</td><td>Standing-stone miniature, or altar centerpiece on the large LED base</td><td></td></tr>
+          <tr><td data-v="8">8</td><td>Crystal trees (×2, one tall w/ green stones)</td><td>Enchanted flora for altar corners</td><td></td></tr>
+          <tr><td data-v="9">9</td><td>Onyx/marble mortar and pestle</td><td>Alchemy station — centerpiece; Arcadia's Cauldron energy</td><td></td></tr>
+          <tr><td data-v="10">10</td><td>Bright yellow sulfur cluster</td><td>Fire salts / brimstone — ingredient display in a dish</td><td></td></tr>
+          <tr><td data-v="11">11</td><td>Peridot chips (bag, labeled)</td><td>Glow dust — pour into a small bowl as loose ingredients</td><td></td></tr>
+          <tr><td data-v="12">12</td><td>Yellow chips (bag — sulfur/calcite)</td><td>Salt pile / moon sugar — ingredient bowl</td><td></td></tr>
+          <tr><td data-v="13">13</td><td>Goldstone chips in tube</td><td>Gold dust — apothecary vial</td><td></td></tr>
+          <tr><td data-v="14">14</td><td>Green chips in corked vial</td><td>Potion ingredient — ready-made corked apothecary bottle</td><td></td></tr>
+          <tr><td data-v="15">15</td><td>Abalone shell</td><td>Ingredient bowl — Hagraven-made look; holds the chips</td><td></td></tr>
+          <tr><td data-v="16">16</td><td>Small banded onyx bowl</td><td>Second ingredient bowl at the alchemy station</td><td></td></tr>
+          <tr><td data-v="17">17</td><td>Bismuth cluster (rainbow geometric)</td><td>Dwemer metal — grouped on the Dwemer shelf</td><td></td></tr>
+          <tr><td data-v="18">18</td><td>Copper nugget pieces</td><td>Dwemer scrap — scatter around the bismuth as ruins debris</td><td></td></tr>
+          <tr><td data-v="19">19</td><td>Dark metallic raw mineral</td><td>Ebony ore chunk — Dwemer shelf</td><td>Photo ID tentative — confirm in hand.</td></tr>
+          <tr><td data-v="20">20</td><td>Skull-shaped planter (dark)</td><td>Draugr crypt corner — plant something spiky in it (a “deathbell”)</td><td></td></tr>
+          <tr><td data-v="21">21</td><td>Selenite bowl + carved heart stone</td><td>Heart Stone (Dragonborn) — offering bowl with the heart displayed in it</td><td>Photo ID tentative — confirm in hand.</td></tr>
+          <tr><td data-v="22">22</td><td>Raw stones — brown, reddish, banded</td><td>Ore samples — iron, corundum, stone; line a shelf like a mine assay office</td><td>Photo ID tentative — confirm in hand.</td></tr>
+          <tr><td data-v="23">23</td><td>Fossil / coral cross-section stone</td><td>Ancient Nord artifact — display piece</td><td>Photo ID tentative — confirm in hand.</td></tr>
+          <tr><td data-v="24">24</td><td>Framed amber pendants / keychains (×4)</td><td>Amber (Dragonborn) — hang as talismans or gift to guests as Hearth tokens</td><td></td></tr>
+          <tr><td data-v="25">25</td><td>2 round stones / coins in plastic</td><td>Septims — scatter in an offering bowl</td><td>Photo ID tentative — confirm in hand.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
     <section class="section" id="journal">
       <div class="section-head">
         <div>
@@ -385,5 +448,33 @@
       <span>Guest house project journal · Payson, Arizona</span>
     </div>
   </footer>
+
+  <script>
+  (function () {
+    var table = document.getElementById('prop-table');
+    if (!table) return;
+    var tbody = table.querySelector('tbody');
+    var dir = 1, lastCol = -1;
+    table.querySelectorAll('thead th').forEach(function (th, col) {
+      th.addEventListener('click', function () {
+        var type = th.getAttribute('data-type');
+        if (col === lastCol) { dir = -dir; } else { dir = 1; lastCol = col; }
+        table.querySelectorAll('thead .dir').forEach(function (el) { el.textContent = ''; });
+        th.querySelector('.dir').textContent = dir === 1 ? '\u25B2' : '\u25BC';
+        var rows = Array.prototype.slice.call(tbody.querySelectorAll('tr'));
+        rows.sort(function (a, b) {
+          var av = a.children[col].getAttribute('data-v') || a.children[col].textContent.trim();
+          var bv = b.children[col].getAttribute('data-v') || b.children[col].textContent.trim();
+          var cmp;
+          if (type === 'num') { cmp = parseFloat(av) - parseFloat(bv); }
+          else { cmp = av.localeCompare(bv); }
+          return cmp * dir;
+        });
+        rows.forEach(function (r) { tbody.appendChild(r); });
+      });
+    });
+  })();
+  </script>
+
 </body>
 </html>
