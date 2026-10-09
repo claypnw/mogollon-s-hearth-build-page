@@ -146,6 +146,7 @@
   function status(msg, ok) {
     var s = $('status');
     s.className = ok ? 'ok' : 'err';
+    s.style.display = '';
     s.textContent = msg;
   }
 
