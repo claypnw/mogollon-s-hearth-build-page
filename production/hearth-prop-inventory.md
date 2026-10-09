@@ -2,7 +2,7 @@
 
 *Numbering is just to identify items.*
 
-> **This file is the master inventory.** Edit the table here on GitHub — add, change, or remove rows. New item photos go in the `props/` folder at the repo root. When you're done, say "propagate" and the workbench app and the public build page will be updated from this file.
+> **This file is the master inventory.** Edit the table here on GitHub — add, change, or remove rows. New item photos go in the `props/` folder at the repo root. When you're done, say "publish the inventory" and the workbench app and the public build page will be updated from this file.
 
 ## Soul gems & light
 
