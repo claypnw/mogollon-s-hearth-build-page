@@ -325,7 +325,13 @@
         $('status').style.display = 'none';
       })
       .catch(function (err) {
-        status('Not saved: ' + err.message + ' Nothing was changed.', false);
+        var msg = 'Not saved: ' + err.message + ' Nothing was changed.';
+        if (/HTTP 40[13]/.test(err.message)) {
+          try { localStorage.removeItem('hearth_gh_token'); } catch (e) {}
+          $('tokenbox').classList.add('open');
+          msg += ' Your saved key was cleared — paste a fresh key below and tap "Save key and continue".';
+        }
+        status(msg, false);
       })
       .then(function () { $('savebtn').disabled = false; });
   }
