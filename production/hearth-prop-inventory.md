@@ -8,7 +8,7 @@
 
 | # | Photo | Item | Where/how used | Notes |
 |---|-------|----------------|-------|
-| 1 | ![1a](../props/prop-01-02-led-bases.jpg) | Wooden LED base, small, USB w/ switch | Lighted soul-gem stand — set a quartz point or egg on it | kkkp-p-[;- |
+| 1 | ![1a](../props/prop-01-02-led-bases.jpg) | Wooden LED base, small, USB w/ switch | Lighted soul-gem stand — set a quartz point or egg on it | purchased at Arizona Gift Center |
 | 2 | ![2](../props/prop-01-02-led-bases.jpg) | Wooden LED base, large, USB w/ switch | Lighted stand for the tall tower or obsidian sphere | |
 | 3 | ![3](../props/prop-03-aura-points.jpg) | Blue titanium aura quartz points (×4 at least) | Soul gems — lit from below on the wood LED bases | |
 | 4 | ![4](../props/prop-04-eggs.jpg) | Polished stone eggs — red, blue, yellow | Soul gems by size — red = greater, blue = common, yellow = lesser; bowl together | |
