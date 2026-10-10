@@ -323,8 +323,7 @@
         item.photos = editPhotos.map(function (p) { return p.path; });
         renderView();
         hide('edit'); show('view');
-        status('', true);
-        $('status').style.display = 'none';
+        status('Saved — the inventory table updates within a few minutes.', true);
       })
       .catch(function (err) {
         var msg = 'Not saved: ' + err.message + ' Nothing was changed.';
