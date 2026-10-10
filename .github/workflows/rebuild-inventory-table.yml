@@ -1,0 +1,34 @@
+name: Rebuild inventory table
+
+# Keeps the public build page's prop inventory table in sync with the master
+# markdown. Every item-page save commits to production/hearth-prop-inventory.md,
+# which triggers this workflow to regenerate the table in index.html.
+# The workflow's own commit only touches index.html, so it never retriggers itself.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'production/hearth-prop-inventory.md'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Rebuild inventory table from master
+        run: python3 .github/scripts/rebuild-inventory-table.py
+      - name: Commit rebuilt table
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git diff --cached --quiet || git commit -m "Auto-rebuild inventory table from master"
+          git push
