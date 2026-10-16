@@ -81,6 +81,30 @@
 | 46 | ![46](../props/prop-46-tier-stand.jpg) | Black metal tiered plate stand | Tiered display — for the alchemy station or feast table | |
 | 47 | ![47](../props/prop-47-leather-jacket.jpg) | Brown leather jacket | Traveler's garb — costume piece for the Hearth keeper | |
 
+## Thrift haul — Oct 16, 2026
+
+| # | Photo | Item | Where/how used | Notes |
+|---|-------|----------------|-------|-------|
+| 48 | ![48](../props/prop-48-tall-case.jpg) | Tall brown case with snakeskin pattern and top handle | Traveler's case — scrolls or a guest welcome kit | |
+| 49 | ![49](../props/prop-49-floral-chest.jpg) | Small chest with gold-brown floral pattern and front latch | Treasure chest — quest rewards or guest tokens | |
+| 50 | ![50](../props/prop-50-woven-basket.jpg) | Woven basket box with lid | Storage basket — linens or alchemy supplies | |
+| 51 | ![51](../props/prop-51-glass-bowl.jpg) | Large clear glass bowl | Scrying bowl — feast-table centerpiece | |
+| 52 | ![52](../props/prop-52-triner-scale.jpg) | Triner metal scale (rusty) | Merchant's scale — market stall dressing | |
+| 53 | ![53](../props/prop-53-metal-vase.jpg) | Metal vase with worn gray-blue finish | Urn vase — dried flora by the hearth | |
+| 54 | ![54](../props/prop-54-wire-basket.jpg) | Dark wire basket with scrollwork | Fruit basket — feast table or market stall | |
+| 55 | ![55](../props/prop-55-emblem-dish.jpg) | Round black dish with crown-and-C emblem | Offering dish — altar or entry table | |
+| 56 | ![56](../props/prop-56-silver-canister.jpg) | Silver canister with cut-out pattern and lid | Lantern jar — a candle inside throws patterned light | |
+| 57 | ![57](../props/prop-57-corked-bottle.jpg) | Small clear glass bottle with cork | Potion bottle — alchemy shelf dressing | |
+| 58 | ![58](../props/prop-58-decanter.jpg) | Square glass decanter with agave design | Skooma decanter — tavern shelf | |
+| 59 | ![59](../props/prop-59-black-vase.jpg) | Black vase with gold ribbed bands | Ceremony vase — altar corner | |
+| 60 | ![60](../props/prop-60-goblets.jpg) | Silver goblets with grape design (×2) | Mead goblets — feast table pair | |
+| 61 | ![61](../props/prop-61-blue-bottle.jpg) | Small cobalt-blue glass bottle | Potion bottle — alchemy shelf color | |
+| 62 | ![62](../props/prop-62-knit-scarf.jpg) | Chunky knit tan scarf | Traveler's garb — costume piece or guest wrap | |
+| 63 | ![63](../props/prop-63-leather-gloves.jpg) | Black leather gloves with long cuffs | Traveler's garb — costume gloves | |
+| 64 | ![64](../props/prop-64-black-bowls.jpg) | Small black bowls (×2) | Ingredient bowls — alchemy station pair | |
+| 65 | ![65](../props/prop-65-braided-belt.jpg) | Braided brown leather belt with brass studs | Traveler's garb — costume belt | |
+| 66 | ![66](../props/prop-66-orange-cups.jpg) | Small orange custard cups, marked 141 USA (×2) | Ingredient cups — alchemy station | |
+
 ## Suggested groupings (vignettes)
 
 1. **Soul-gem altar** — both LED bases lit, aura points + eggs + obsidian sphere on/around them. Dark corner, maximum glow.
