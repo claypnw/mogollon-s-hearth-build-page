@@ -105,6 +105,28 @@
 | 65 | ![65](../props/prop-65-braided-belt.jpg) | Braided brown leather belt with brass studs | Traveler's garb — costume belt | |
 | 66 | ![66](../props/prop-66-orange-cups.jpg) | Small orange custard cups, marked 141 USA (×2) | Ingredient cups — alchemy station | |
 
+## Thrift haul — Oct 23, 2026
+
+| # | Photo | Item | Where/how used | Notes |
+|---|-------|----------------|-------|-------|
+| 67 | ![67](../props/prop-67-curtain-panel.jpg) | Burgundy satin curtain panel | Doorway hanging — Jarl's-hall drape for a tavern or inn-room doorway | |
+| 68 | ![68](../props/prop-68-rattan-cabinet.jpg) | Small light-wood cabinet with rattan top and glass-front door | Alchemist's cabinet — bottles and ingredients behind glass | |
+| 69 | ![69](../props/prop-69-wicker-basket.jpg) | Dark woven wicker basket with vine handle and metal leaves | Market basket — feast-table or market stall dressing | |
+| 70 | ![70](../props/prop-70-wire-flask.jpg) | Dark metal flask with wire-mesh wrap and stopper | Netted flask — traveler's bottle for the tavern shelf | |
+| 71 | ![71](../props/prop-71-glass-carafe.jpg) | Clear glass carafe with wide mouth | Water carafe — serves at the feast table | |
+| 72 | ![72](../props/prop-72-rope-lantern.jpg) | Woven rope lantern with wooden top and rope handle | Lantern — a candle inside lights a doorway or path | |
+| 73 | ![73](../props/prop-73-copper-pot.jpg) | Small copper pot with twisted brass handles and claw feet | Cooking pot — hearth-corner dressing | |
+| 74 | ![74](../props/prop-74-faceted-bottle.jpg) | Tall clear glass bottle with faceted body and long neck | Potion bottle — tall apothecary bottle for the alchemy shelf | |
+| 75 | ![75](../props/prop-75-slim-corked-bottle.jpg) | Slim clear glass bottle with cork stopper | Potion bottle — alchemy shelf dressing | Second corked bottle — pairs with #57 |
+| 76 | ![76](../props/prop-76-frosted-vase.jpg) | Small frosted white glass vase with textured bulb base | Ceremony vase — altar corner; milky glass reads moonlit | |
+| 77 | ![77](../props/prop-77-waisted-decanter.jpg) | Clear glass decanter with waisted square body and flared neck | Skooma decanter — tavern shelf | |
+| 78 | ![78](../props/prop-78-brass-tankard.jpg) | Brass lidded tankard with wire handle | Tankard — mead-hall table | |
+| 79 | ![79](../props/prop-79-cream-crock.jpg) | Small cream ceramic crock with pouring lip | Ingredient crock — alchemy station, holds a salt pile or loose ingredients | |
+| 80 | ![80](../props/prop-80-horn-tankard.jpg) | Horn tankard with etched wolf design | Hunter's tankard — wolf-etched horn for the hunter's table | |
+| 81 | ![81](../props/prop-81-wooden-goblets.jpg) | Turned dark-wood goblets (×2) | Mead goblets — feast table pair, wooden tavern ware | |
+| 82 | ![82](../props/prop-82-cordial-glasses.jpg) | Small clear cordial glasses with etched leaf design (×2) | Cordial glasses — noble's table pair, spiced wine at the feast | |
+| 83 | ![83](../props/prop-83-glass-goblets.jpg) | Large clear glass goblets with etched design (×2) | Feast goblets — Jarl's table pair, large bowls for mead | |
+
 ## Suggested groupings (vignettes)
 
 1. **Soul-gem altar** — both LED bases lit, aura points + eggs + obsidian sphere on/around them. Dark corner, maximum glow.
