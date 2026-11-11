@@ -1,0 +1,4 @@
+Skyrim travel scale removed entirely from the approved map artwork at user request.
+All other map assets, popups, hotspots, crossfade settings, and Google Maps settings retained from the previous ZIP.
+The removed scale was embedded in assets/skyrim.webp, not rendered by separate HTML elements.
+GitHub unchanged.

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#17252c">
+<title>World of Nirn | Interactive Atlas</title>
+<link rel="stylesheet" href="atlas.css">
+</head>
+<body>
+<main class="shell">
+<header class="top"><div class="title"><h1>World of Nirn</h1><div class="subtitle" id="subTitle">Explore the lands of Tamriel</div></div><nav class="actions" aria-label="Map navigation"><button id="back" type="button" hidden>← World of Nirn</button><button id="reset" type="button">Return to World Map</button></nav></header>
+<div class="mapbox" id="mapbox">
+<section class="scene active" id="world" aria-label="World of Nirn map" aria-hidden="false"><img src="assets/world.webp" alt="Parchment fantasy atlas of Nirn showing Skyrim in northern Tamriel, surrounded by other provinces and continents" draggable="false"><svg class="hotspots" viewBox="0 0 1536 1024" preserveAspectRatio="xMidYMid meet" role="group" aria-label="Interactive world map regions"></svg></section>
+<section class="scene" id="skyrim" inert aria-label="Skyrim province map" aria-hidden="true"><img src="assets/skyrim.webp" alt="Detailed parchment map of Skyrim including Riften and Mogollon Hearth in purple at the southeast, plus a travel scale" draggable="false"><svg class="hotspots" viewBox="0 0 1536 1024" preserveAspectRatio="xMidYMid meet" role="group" aria-label="Interactive Skyrim map regions"></svg></section>
+<aside class="lore-card hover-card" id="hoverCard" aria-hidden="true" hidden>
+  <h2 id="hoverTitle"></h2>
+  <div id="hoverText"></div>
+</aside>
+<dialog class="lore-card" id="loreCard" aria-labelledby="loreTitle">
+  <header class="lore-header">
+    <h2 id="loreTitle"></h2>
+    <button type="button" class="lore-close" id="loreClose" aria-label="Close lore card" autofocus>×</button>
+  </header>
+  <div class="lore-body" id="loreBody">
+    <div id="loreText"></div>
+    <div class="lore-actions">
+      <button type="button" id="loreExplore" hidden>Explore Skyrim</button>
+      <a class="actionlink" id="loreMaps" target="_blank" rel="noopener noreferrer" hidden>Open Arizona in Google Maps ↗</a>
+      <button type="button" id="loreDismiss">Close</button>
+    </div>
+  </div>
+</dialog>
+</div>
+<div class="foot"><label class="location-picker">Read about a location <select id="locationPicker"></select></label><div class="actions"><button type="button" id="openSkyrim">Explore Skyrim</button><a class="actionlink" id="openArizona" href="https://www.google.com/maps/@34.5610839,-111.31416,178373m/data=!3m1!1e3" target="_blank" rel="noopener noreferrer" hidden>Open Arizona in Google Maps ↗</a></div></div>
+<p class="small">Tap or click a map label to open its lore card. With a mouse, pause over a location to preview it.</p>
+</main>
+<script src="lore.js"></script>
+<script src="regions.js"></script>
+<script src="atlas.js"></script>
+</body>
+</html>
