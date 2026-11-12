@@ -14,7 +14,8 @@ const lore = {
   ],
   "Hammerfell": [
     "Hammerfell is the western homeland of the Redguards, whose ancestors crossed the sea from Yokuda. The Alik’r Desert covers much of the northwest, where the port of Sentinel looks across the Iliac Bay. Farther south, Hew’s Bane and the harbor city of Abah’s Landing show how much of Hammerfell’s life also depends on the coast.",
-    "The early Yokudan fighting forces were known as the Ra Gada, a name associated with the origins of “Redguard.” Later generations fought over the province’s place in the Empire. In the Fourth Era, Hammerfell rejected the territorial concessions of the White-Gold Concordat and continued fighting the Aldmeri Dominion before a separate treaty ended the war there."
+    "The early Yokudan fighting forces were known as the Ra Gada, a name associated with the origins of “Redguard.” Later generations fought over the province’s place in the Empire. In the Fourth Era, Hammerfell rejected the territorial concessions of the White-Gold Concordat and continued fighting the Aldmeri Dominion before a separate treaty ended the war there.",
+    "Atlas update — November 2026: Bethesda revealed The Elder Scrolls VI: Sentinel on November 3. Its teaser names Yazar, Moth Priest to High Queen Iradne of Hammerfell, in a passage dated 4E 206, five years after the events of Skyrim. This points to Hammerfell, but the full playable geography, story timeline, and release date have not yet been announced."
   ],
   "Cyrodiil": [
     "Cyrodiil is the heartland of the Empire and the homeland of the Imperials. At its center stands the Imperial City, built on an island in Lake Rumare. The White-Gold Tower, a legacy of the ancient Ayleids, rises above the capital. The province reaches from the Jerall Mountains on Skyrim’s border to the Gold Coast in the west and the Nibenay Basin in the east.",
