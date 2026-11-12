@@ -2,10 +2,11 @@
   'use strict';
 
   const byId = id => document.getElementById(id);
-  const maps = ['world', 'skyrim'];
+  const maps = ['world', 'skyrim', 'hammerfell'];
   const back = byId('back');
   const reset = byId('reset');
   const openSkyrim = byId('openSkyrim');
+  const openHammerfell = byId('openHammerfell');
   const openArizona = byId('openArizona');
   const picker = byId('locationPicker');
   const dialog = byId('loreCard');
@@ -41,7 +42,9 @@
     // activation must not leave a visible focus ring on the map.
     returnFocus = fromKeyboard ? trigger : null;
     fillCard(title, byId('loreTitle'), byId('loreText'));
-    explore.hidden = map !== 'world' || title !== 'Skyrim';
+    explore.hidden = map !== 'world' || !['Skyrim', 'Hammerfell'].includes(title);
+    explore.dataset.destination = title.toLowerCase();
+    explore.textContent = 'Explore ' + title;
     mapsLink.hidden = map !== 'skyrim' || title !== 'Mogollon Hearth';
     dialog.showModal();
     byId('loreBody').scrollTop = 0;
@@ -62,16 +65,17 @@
       scene.inert = !active;
       scene.setAttribute('aria-hidden', String(!active));
     }
-    const detailed = name === 'skyrim';
+    const detailed = name !== 'world';
     back.hidden = !detailed;
     openSkyrim.hidden = detailed;
-    openArizona.hidden = !detailed;
-    byId('subTitle').textContent = detailed ? 'Skyrim · Province of Tamriel' : 'Explore the lands of Tamriel';
+    openHammerfell.hidden = detailed;
+    openArizona.hidden = name !== 'skyrim';
+    byId('subTitle').textContent = detailed ? (name === 'skyrim' ? 'Skyrim' : 'Hammerfell') + ' · Province of Tamriel' : 'Explore the lands of Tamriel';
     picker.replaceChildren(new Option('Choose a location', ''), ...Object.keys(regionsByMap[name])
       .sort((a, b) => a.localeCompare(b))
       .map(title => new Option(title, title)));
     const url = new URL(location.href);
-    url.hash = detailed ? 'skyrim' : '';
+    url.hash = detailed ? name : '';
     if (url.href !== location.href) history.replaceState({ view: name }, '', url);
     if (focusTarget) focusTarget.focus({ preventScroll: true });
   }
@@ -143,14 +147,16 @@
   });
   mapsLink.href = openArizona.href;
   mapsLink.addEventListener('click', () => dialog.close());
-  explore.addEventListener('click', () => changeMap('skyrim', back));
+  explore.addEventListener('click', () => changeMap(explore.dataset.destination, back));
   back.addEventListener('click', () => changeMap('world', openSkyrim));
   reset.addEventListener('click', () => changeMap('world', openSkyrim));
   openSkyrim.addEventListener('click', () => changeMap('skyrim', back));
-  window.addEventListener('hashchange', () => changeMap(location.hash === '#skyrim' ? 'skyrim' : 'world'));
+  openHammerfell.addEventListener('click', () => changeMap('hammerfell', back));
+  const mapFromHash = () => maps.includes(location.hash.slice(1)) ? location.hash.slice(1) : 'world';
+  window.addEventListener('hashchange', () => changeMap(mapFromHash()));
   window.addEventListener('blur', hidePreview);
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape') hidePreview();
   });
-  changeMap(location.hash === '#skyrim' ? 'skyrim' : 'world');
+  changeMap(mapFromHash());
 })();
