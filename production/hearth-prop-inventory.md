@@ -1,6 +1,6 @@
 # My Mogollon's Hearth Props
 
-*Numbering is just to identify items.*
+*Numbering is permanent: each piece's number is assigned once, never changed, and never reused. A piece that leaves the inventory keeps its number retired — that number names that piece forever and is not given to any other piece.*
 
 > **This file is the master inventory.** Edit the table here on GitHub — add, change, or remove rows. New item photos go in the `props/` folder at the repo root. When you're done, say "publish the inventory" and the workbench app and the public build page will be updated from this file.
 
@@ -126,6 +126,16 @@
 | 81 | ![81](../props/prop-81-wooden-goblets.jpg) | Turned dark-wood goblets (×2) | Mead goblets — feast table pair, wooden tavern ware | |
 | 82 | ![82](../props/prop-82-cordial-glasses.jpg) | Small clear cordial glasses with etched leaf design (×2) | Cordial glasses — noble's table pair, spiced wine at the feast | |
 | 83 | ![83](../props/prop-83-glass-goblets.jpg) | Large clear glass goblets with etched design (×2) | Feast goblets — Jarl's table pair, large bowls for mead | |
+
+## Thrift haul — Nov 13, 2026
+
+| # | Photo | Item | Where/how used | Notes |
+|---|-------|----------------|-------|-------|
+| 84 | ![84](../props/prop-84-red-mugs.jpg) | Red metal mugs, Moscow mule style — shiny red outside, stainless steel inside, gold-colored angular handles (×2) | Mead mugs — mead-hall table pair | Thrift store pickup, Nov 13, 2026 — no tag, brand, or writing readable |
+| 85 | ![85](../props/prop-85-glass-bowl-stand.jpg) | Clear glass bowl in a black iron stand — curled feet, loop handles on the sides | Serving bowl — feast-table centerpiece in its iron stand | Thrift store pickup, Nov 13, 2026 — no tag or writing readable |
+| 86 | ![86](../props/prop-86-flared-glass-vase.jpg) | Clear glass vase — wide flared top with a dark edge around the rim, rounded body, small round foot | Ceremony vase — altar corner or feast-table flowers | Thrift store pickup, Nov 13, 2026 — no tag or writing readable |
+| 87 | ![87](../props/prop-87-galvanized-pail.jpg) | Galvanized metal pail — weathered gray metal, wire handle over the top, riveted brackets on the rim | Hearth pail — water or ice bucket for the hearth corner | Thrift store pickup, Nov 13, 2026 — green mark on the far side could not be read; no price tag visible |
+| 88 | ![88](../props/prop-88-enamel-coffee-pot.jpg) | Black enamel camp coffee pot — white speckles in the black finish, lid, spout, side handle, tall wire handle over the top | Coffee pot — hearth-side coffee for the keeper and guests | Thrift store pickup, Nov 13, 2026 — no tag or writing readable |
 
 ## Suggested groupings (vignettes)
 
